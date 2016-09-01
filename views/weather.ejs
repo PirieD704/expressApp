@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+	// 	//what we just did on the server side. This is how it is done on the browser side with Jquery
+	// 	var apikey = 'e312dbeb8840e51f92334498a261ca1d';
+ //    	var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&APPID="+apikey;
+
+ //    	$.getJSON(weatherUrl, function(weatherData){
+ //    		console.log(weatherData);
+ //    	})
+
+ 	</script>
+</head>
+<body>
+	
+	<h1 class="title">Weather Page</h1>
+
+
+		The temperature in Atlanta is: <%= weatherObject.main.temp %>
+		<hr />
+		<%= varType %>
+
+
+</body>
+</html>

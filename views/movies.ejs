@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script type="text/javascript">
+
+	// 	//what we just did on the server side. This is how it is done on the browser side with Jquery
+		// var apiBaseUrl = 'http://api.themoviedb.org/3/';  
+		// var imageBaseUrl = 'http://image.tmdb.org/t/p/';
+		// var apiKey = '?api_key=fec8b5ab27b292a68294261bb21b04a5';
+		// var npUrl  = apiBaseUrl + 'movie/now_playing' + apiKey;
+    	// $.getJSON(npUrl, function(movieData){
+    	// 	console.log(movieData);
+    	// })
+
+ 	</script>
+</head>
+<body>
+	
+	<h1 class="title">Movie Page</h1>
+	<table>
+		<tbody>
+		<% for(var i = 0; i<moviesObject.results.length; i++){ %>
+			<tr>
+				<td><img src='<%= imageBaseUrl + 'w300' + moviesObject.results[i].poster_path %>'></td>
+				<td><%= moviesObject.results[i].original_title %></td>
+			</tr>
+		<% } %>
+		</tbody>
+	</table>
+
+</body>
+</html>
